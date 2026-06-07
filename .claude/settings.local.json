@@ -1,0 +1,6 @@
+{
+  "enabledMcpjsonServers": [
+    "wechat"
+  ],
+  "enableAllProjectMcpServers": true
+}

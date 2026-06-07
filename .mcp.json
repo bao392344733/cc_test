@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "wechat": {
+      "command": "node",
+      "args": [
+        "/Users/baoyoutian/.npm/_npx/d30fb5d9f2b55e54/node_modules/claude-code-wechat/dist/wechat-channel.js"
+      ]
+    }
+  }
+}
