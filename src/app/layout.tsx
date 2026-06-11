@@ -1,15 +1,9 @@
 import type { Metadata } from "next";
-import { Nunito, Inter, Geist_Mono } from "next/font/google";
+import { Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-
-const nunito = Nunito({
-  variable: "--font-nunito",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  display: "swap",
-});
 
 const inter = Inter({
   variable: "--font-inter",
@@ -23,10 +17,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PURR — Premium Pet Supplies | Life is Better with Purrs",
+  title: "PawRomer | Travel Better With Your Dog",
   description:
-    "PURR 为你的毛孩子精选天然、安全、高品质的宠物用品。猫、狗、小宠一站式购物体验。",
-  keywords: ["pet supplies", "dog food", "cat toys", "pet store", "PURR"],
+    "Premium travel essentials for dogs and their owners. Explore carriers, bowls, seat covers and outdoor accessories designed for every adventure.",
+  keywords: [
+    "dog travel gear",
+    "dog carrier",
+    "travel dog bowl",
+    "car seat cover for dogs",
+    "dog outdoor accessories",
+    "PawRomer",
+  ],
+  openGraph: {
+    title: "PawRomer | Travel Better With Your Dog",
+    description:
+      "Premium travel essentials for dogs and their owners. Explore carriers, bowls, seat covers and outdoor accessories designed for every adventure.",
+    type: "website",
+    locale: "en_US",
+    siteName: "PawRomer",
+  },
 };
 
 export default function RootLayout({
@@ -37,9 +46,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${nunito.variable} ${inter.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <AnnouncementBar />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

@@ -1,17 +1,17 @@
-import { Truck, Leaf, ShieldCheck, Undo2 } from "lucide-react";
+import { Plane, Truck, ShieldCheck, Users } from "lucide-react";
 
 const badges = [
-  { icon: Truck, label: "Free Shipping", sub: "Orders $49+" },
-  { icon: Leaf, label: "100% Natural", sub: "Eco-friendly" },
-  { icon: ShieldCheck, label: "Vet Approved", sub: "Quality assured" },
-  { icon: Undo2, label: "Easy Returns", sub: "30-day policy" },
+  { icon: Plane, label: "Airline Approved", sub: "Cabin-ready carriers" },
+  { icon: Truck, label: "Free Shipping", sub: "On orders over $50" },
+  { icon: ShieldCheck, label: "30-Day Guarantee", sub: "Money back, no questions" },
+  { icon: Users, label: "15,000+ Customers", sub: "Trusted worldwide" },
 ];
 
-export function TrustBadges() {
+export function TrustBar() {
   return (
-    <section className="border-y border-[#EBE6E0] bg-white">
-      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
+    <section className="border-y border-[#E5E7EB] bg-white">
+      <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
           {badges.map(({ icon: Icon, label, sub }) => (
             <div key={label} className="flex items-center gap-3 justify-center sm:justify-start">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10">

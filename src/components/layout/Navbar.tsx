@@ -2,32 +2,31 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ShoppingCart, Search, Menu, X, PawPrint } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ShoppingCart, Search, Menu, X, Mountain } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { label: "Shop All", href: "/shop" },
-  { label: "Dogs", href: "/dogs" },
-  { label: "Cats", href: "/cats" },
-  { label: "Small Pets", href: "/small-pets" },
-  { label: "About", href: "/about" },
+  { label: "Shop", href: "/shop" },
+  { label: "Travel Bags", href: "/category/travel-carriers" },
+  { label: "Travel Bowls", href: "/category/travel-bowls" },
+  { label: "Seat Covers", href: "/category/seat-covers" },
+  { label: "Accessories", href: "/category/adventure-accessories" },
 ];
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-lg border-b border-[#EBE6E0]">
+    <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-[#E5E7EB]">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 font-heading text-2xl font-bold text-primary">
-          <PawPrint className="h-6 w-6" />
-          PURR
+        <Link href="/" className="flex items-center gap-2 font-heading text-xl font-bold text-primary">
+          <Mountain className="h-6 w-6" />
+          PawRomer
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -42,24 +41,24 @@ export function Navbar() {
         {/* Actions */}
         <div className="flex items-center gap-3">
           <button
-            className="hidden sm:inline-flex items-center justify-center rounded-full p-2 text-muted-foreground transition-colors hover:text-primary hover:bg-muted"
+            className="hidden sm:inline-flex items-center justify-center rounded-full p-2 text-foreground-muted transition-colors hover:text-primary hover:bg-muted"
             aria-label="Search"
           >
             <Search className="h-5 w-5" />
           </button>
           <button
-            className="relative inline-flex items-center justify-center rounded-full p-2 text-muted-foreground transition-colors hover:text-primary hover:bg-muted"
+            className="relative inline-flex items-center justify-center rounded-full p-2 text-foreground-muted transition-colors hover:text-primary hover:bg-muted"
             aria-label="Cart"
           >
             <ShoppingCart className="h-5 w-5" />
-            <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-pop text-[10px] font-bold text-white">
+            <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-secondary text-[10px] font-bold text-white">
               0
             </span>
           </button>
 
           {/* Mobile Menu Toggle */}
           <button
-            className="inline-flex md:hidden items-center justify-center rounded-full p-2 text-muted-foreground"
+            className="inline-flex lg:hidden items-center justify-center rounded-full p-2 text-foreground-muted"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -71,8 +70,8 @@ export function Navbar() {
       {/* Mobile Nav */}
       <div
         className={cn(
-          "md:hidden overflow-hidden transition-all duration-300 ease-out",
-          mobileOpen ? "max-h-80 border-t border-[#EBE6E0]" : "max-h-0"
+          "lg:hidden overflow-hidden transition-all duration-300 ease-out",
+          mobileOpen ? "max-h-96 border-t border-[#E5E7EB]" : "max-h-0"
         )}
       >
         <nav className="flex flex-col gap-1 bg-white px-4 py-4">
@@ -86,7 +85,7 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
-          <div className="mt-2 border-t border-[#EBE6E0] pt-2">
+          <div className="mt-2 border-t border-[#E5E7EB] pt-2">
             <Link
               href="/search"
               onClick={() => setMobileOpen(false)}

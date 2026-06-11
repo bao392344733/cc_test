@@ -1,78 +1,58 @@
 import Link from "next/link";
-import { Dog, Cat, Rabbit } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 const categories = [
   {
-    name: "Dogs",
-    icon: Dog,
-    count: "120+ products",
-    href: "/dogs",
-    gradient: "from-primary/15 to-primary/5",
-    iconBg: "bg-primary/10 text-primary",
+    name: "Seat Covers",
+    href: "/category/seat-covers",
+    image: "https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?w=400&h=400&fit=crop&auto=format&q=80",
   },
   {
-    name: "Cats",
-    icon: Cat,
-    count: "95+ products",
-    href: "/cats",
-    gradient: "from-secondary/30 to-secondary/5",
-    iconBg: "bg-accent/10 text-accent",
+    name: "Travel Bowls",
+    href: "/category/travel-bowls",
+    image: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=400&fit=crop&auto=format&q=80",
   },
   {
-    name: "Small Pets",
-    icon: Rabbit,
-    count: "45+ products",
-    href: "/small-pets",
-    gradient: "from-pop/15 to-pop/5",
-    iconBg: "bg-pop/10 text-pop",
+    name: "Travel Bags",
+    href: "/category/travel-carriers",
+    image: "https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?w=400&h=400&fit=crop&auto=format&q=80",
+  },
+  {
+    name: "Accessories",
+    href: "/category/adventure-accessories",
+    image: "https://images.unsplash.com/photo-1568572933382-74d440642117?w=400&h=400&fit=crop&auto=format&q=80",
   },
 ];
 
 export function CategoryNav() {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+    <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       <div className="text-center">
         <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">
-          Shop by Pet
+          Shop by Category
         </h2>
         <p className="mt-3 text-muted-foreground">
-          Find the perfect products for your furry, fluffy, or feathery friend.
+          Everything you need for adventures with your best friend.
         </p>
       </div>
 
-      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {categories.map(({ name, icon: Icon, count, href, gradient, iconBg }) => (
+      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {categories.map(({ name, href, image }) => (
           <Link
             key={name}
             href={href}
-            className={cn(
-              "group relative overflow-hidden rounded-2xl border border-[#EBE6E0] bg-white p-8 shadow-sm",
-              "transition-all duration-300 ease-out hover:shadow-xl hover:-translate-y-1"
-            )}
+            className="group relative flex flex-col overflow-hidden rounded-2xl border border-[#E5E7EB] bg-white shadow-sm transition-all duration-300 ease-out hover:shadow-lg hover:-translate-y-1"
           >
-            {/* Gradient background on hover */}
-            <div
-              className={cn(
-                "absolute inset-0 bg-gradient-to-br opacity-0 transition-opacity duration-300 group-hover:opacity-100",
-                gradient
-              )}
-            />
-
-            <div className="relative z-10 flex flex-col items-center text-center">
-              <div
-                className={cn(
-                  "flex h-20 w-20 items-center justify-center rounded-2xl transition-transform duration-300 group-hover:scale-110",
-                  iconBg
-                )}
-              >
-                <Icon className="h-9 w-9" strokeWidth={1.5} />
-              </div>
-              <h3 className="mt-5 font-heading text-xl font-semibold text-foreground">
-                {name}
-              </h3>
-              <p className="mt-1 text-sm text-muted-foreground">{count}</p>
-              <span className="mt-4 inline-flex items-center text-sm font-medium text-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <div className="aspect-[4/3] overflow-hidden">
+              <img
+                src={image}
+                alt={name}
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+              />
+            </div>
+            <div className="flex items-center justify-between p-5">
+              <h3 className="font-heading text-lg font-semibold text-foreground">{name}</h3>
+              <span className="text-sm font-medium text-primary opacity-0 translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
                 Shop Now →
               </span>
             </div>

@@ -35,7 +35,7 @@
 
   --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-nunito);
+  --font-heading: var(--font-inter);
 
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
@@ -46,58 +46,57 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-/* ─── PURR Brand Design Tokens ─── */
+/* ─── PawRomer Brand Design Tokens ─── */
 :root {
-  /* Base — warmer & lighter than pure black, clearly distinct */
-  --background: #FAF7F4;
-  --foreground: #3D3A36;
-  --foreground-muted: #6E6A64;
+  /* Base — clean white with near-black text */
+  --background: #FFFFFF;
+  --foreground: #111827;
+  --foreground-muted: #6B7280;
 
   /* Surfaces */
   --card: #FFFFFF;
-  --card-foreground: #3D3A36;
+  --card-foreground: #111827;
   --popover: #FFFFFF;
-  --popover-foreground: #3D3A36;
+  --popover-foreground: #111827;
 
-  /* Primary: Warm Sage Green #8A9A78 */
-  --primary: #8A9A78;
+  /* Primary: Deep Navy #1E3A8A — premium, trustworthy, outdoor */
+  --primary: #1E3A8A;
   --primary-foreground: #FFFFFF;
 
-  /* Secondary: Honey Gold #F3C98B */
-  --secondary: #F3C98B;
-  --secondary-foreground: #3D3A36;
+  /* Secondary: Adventure Orange #F97316 — energetic CTA */
+  --secondary: #F97316;
+  --secondary-foreground: #FFFFFF;
 
   /* Muted / Subtle */
-  --muted: #F2EDE8;
-  --muted-foreground: #8A8680;
+  --muted: #F3F4F6;
+  --muted-foreground: #6B7280;
 
-  /* Accent: Warm Terracotta #E8835C (CTA) */
-  --accent: #E8835C;
+  /* Accent: Adventure Orange (same as secondary, for CTA emphasis) */
+  --accent: #F97316;
   --accent-foreground: #FFFFFF;
 
-  /* Pop: Vibrant Tangerine #FF6B3D (badges, highlights) */
-  --pop: #FF6B3D;
+  /* Pop: Orange for badges/highlights */
+  --pop: #F97316;
   --pop-foreground: #FFFFFF;
 
   /* Destructive */
-  --destructive: #E8533D;
+  --destructive: #DC2626;
   --destructive-foreground: #FFFFFF;
 
   /* Borders & Inputs */
-  --border: #EBE6E0;
-  --input: #EBE6E0;
+  --border: #E5E7EB;
+  --input: #E5E7EB;
 
   /* Focus Ring */
-  --ring: #8A9A78;
+  --ring: #1E3A8A;
 
-  /* Charts (same palette, varied opacity) */
-  --chart-1: #8A9A78;
-  --chart-2: #E8835C;
-  --chart-3: #F3C98B;
-  --chart-4: #FF6B3D;
-  --chart-5: #D06D47;
+  /* Charts */
+  --chart-1: #1E3A8A;
+  --chart-2: #F97316;
+  --chart-3: #FBBF24;
+  --chart-4: #10B981;
+  --chart-5: #3B82F6;
 
-  /* Radius: 16px = 1rem for cards */
   --radius: 1rem;
 }
 
@@ -111,7 +110,6 @@
   html {
     @apply font-sans;
   }
-  /* Heading font for h1-h4 */
   h1, h2, h3, h4 {
     @apply font-heading tracking-tight;
   }
