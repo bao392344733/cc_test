@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "PawRomer | Travel Better With Your Dog",
   description:
-    "Premium travel essentials for dogs and their owners. Explore carriers, bowls, seat covers and outdoor accessories designed for every adventure.",
+    "Premium dog travel gear: seat covers, travel bowls, carriers, and outdoor accessories. Free shipping over $50. 30-day guarantee. Trusted by 15,000+ dog owners.",
   keywords: [
     "dog travel gear",
     "dog carrier",

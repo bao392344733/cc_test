@@ -20,7 +20,11 @@
       "Bash(curl -s -o /dev/null -w \"about %{http_code}\\\\n\" http://localhost:3000/about)",
       "Bash(curl -s -o /dev/null -w \"contact %{http_code}\\\\n\" http://localhost:3000/contact)",
       "Bash(curl -s -o /dev/null -w \"faq %{http_code}\\\\n\" http://localhost:3000/faq)",
-      "Bash(node -e \"const m = require\\('lucide-react'\\); console.log\\(Object.keys\\(m\\).filter\\(k => k.toLowerCase\\(\\).includes\\('insta'\\) || k.toLowerCase\\(\\).includes\\('face'\\) || k.toLowerCase\\(\\).includes\\('youtu'\\) || k.toLowerCase\\(\\).includes\\('twitter'\\) || k.toLowerCase\\(\\).includes\\('globe'\\) || k.toLowerCase\\(\\).includes\\('camera'\\) || k.toLowerCase\\(\\).includes\\('image'\\) || k.toLowerCase\\(\\).includes\\('film'\\)\\).join\\('\\\\n'\\)\\)\")"
+      "Bash(node -e \"const m = require\\('lucide-react'\\); console.log\\(Object.keys\\(m\\).filter\\(k => k.toLowerCase\\(\\).includes\\('insta'\\) || k.toLowerCase\\(\\).includes\\('face'\\) || k.toLowerCase\\(\\).includes\\('youtu'\\) || k.toLowerCase\\(\\).includes\\('twitter'\\) || k.toLowerCase\\(\\).includes\\('globe'\\) || k.toLowerCase\\(\\).includes\\('camera'\\) || k.toLowerCase\\(\\).includes\\('image'\\) || k.toLowerCase\\(\\).includes\\('film'\\)\\).join\\('\\\\n'\\)\\)\")",
+      "Bash(npx vercel *)",
+      "mcp__plugin_vercel_vercel__get_access_to_vercel_url",
+      "mcp__plugin_vercel_vercel__web_fetch_vercel_url",
+      "mcp__plugin_vercel_vercel__get_deployment_build_logs"
     ]
   },
   "enableAllProjectMcpServers": true,
